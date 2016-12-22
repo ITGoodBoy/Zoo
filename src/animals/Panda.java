@@ -8,9 +8,13 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 public class Panda extends Animal implements Voice {
-    public Panda(String name, int age, int weight) {
+
+    private boolean kungfuMaster;
+
+    public Panda(String name, int age, int weight, boolean kungfuMaster) {
         super(name, age, weight);
         setImage("/images/panda.png");
+        this.kungfuMaster = kungfuMaster;
     }
 
     @Override
@@ -25,5 +29,18 @@ public class Panda extends Animal implements Voice {
         {
             exc.printStackTrace(System.out);
         }
+    }
+
+    public boolean isKungfuMaster() {
+        return kungfuMaster;
+    }
+
+    public void setKungfuMaster(boolean kungfuMaster) {
+        this.kungfuMaster = kungfuMaster;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " Kungfu is the master? - " + isKungfuMaster();
     }
 }

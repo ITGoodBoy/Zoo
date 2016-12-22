@@ -5,9 +5,13 @@ import interfaces.Swipe;
 
 public class Parrot extends Bird implements Swipe{
 
-    public Parrot(String name, int age, int weight, int flightHeight, int airSpeed, boolean fly) {
+
+    private boolean canSpeak;
+
+    public Parrot(String name, int age, int weight, int flightHeight, int airSpeed, boolean fly, boolean canSpeak) {
         super(name, age, weight, flightHeight, airSpeed, fly);
         setImage("/images/parrot.png");
+        this.canSpeak = canSpeak;
     }
 
     @Override
@@ -25,5 +29,18 @@ public class Parrot extends Bird implements Swipe{
 
         int a = (int) (Math.random() * 9);
         setImage(strings[a]);
+    }
+
+    public boolean isCanSpeak() {
+        return canSpeak;
+    }
+
+    public void setCanSpeak(boolean canSpeak) {
+        this.canSpeak = canSpeak;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " is Can Speak? - " + isCanSpeak();
     }
 }

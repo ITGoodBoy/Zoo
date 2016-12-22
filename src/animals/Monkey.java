@@ -7,9 +7,20 @@ import javax.sound.sampled.Clip;
 
 
 public class Monkey extends Animal implements Voice {
-    public Monkey(String name, int age, int weight) {
+    public int getNumberOfBananas() {
+        return numberOfBananas;
+    }
+
+    public void setNumberOfBananas(int numberOfBananas) {
+        this.numberOfBananas = numberOfBananas;
+    }
+
+    private int numberOfBananas;
+
+    public Monkey(String name, int age, int weight, int numberOfBananas) {
         super(name, age, weight);
         setImage("/images/monkey.png");
+        this.numberOfBananas = numberOfBananas;
     }
 
 
@@ -27,5 +38,10 @@ public class Monkey extends Animal implements Voice {
         {
             exc.printStackTrace(System.out);
         }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " number of bananas " + getNumberOfBananas();
     }
 }

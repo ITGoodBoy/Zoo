@@ -13,14 +13,14 @@ public class Zoo extends JFrame {
     private JButton[][] jButtons = new JButton[3][3];
     private JPanel jPanel = new JPanel(new GridLayout(3, 3));
     private Animal[] animals = new Animal[]{new Pig("Бемби", 15, 25), new Elephant("Добряк", 23, 35),
-            new Giraffe("Остряк", 15, 25), new Monkey("Подруга", 23, 35),
-            new Panda("Пивовар", 15, 25), new Parrot("Говорун", 23, 35, 100, 25, false),
+            new Giraffe("Остряк", 15, 25, 4), new Monkey("Подруга", 23, 35, 7),
+            new Panda("Пивовар", 15, 25, true), new Parrot("Говорун", 23, 35, 100, 25, false, true),
             new Penguin("Пушистик", 15, 25, 0, 0, false), new Rabbit("Хитрун", 23, 35),
             new Snake("Каа", 15, 25)};
 
     public Zoo()
     {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         int count = 0;

@@ -9,9 +9,20 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Giraffe extends Animal implements Rotatable {
-    public Giraffe(String name, int age, int weight) {
+
+    public int getNeckLength() {
+        return neckLength;
+    }
+
+    public void setNeckLength(int neckLength) {
+        this.neckLength = neckLength;
+    }
+
+    private int neckLength;
+    public Giraffe(String name, int age, int weight, int neckLength) {
         super(name, age, weight);
         setImage("/images/giraffe.png");
+        this.neckLength = neckLength;
     }
 
     @Override
@@ -26,7 +37,8 @@ public class Giraffe extends Animal implements Rotatable {
         setImage(new ImageIcon(bufferedImage));
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return super.toString() + " neckLength " + getNeckLength();
+    }
 }
