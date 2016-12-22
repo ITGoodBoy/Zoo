@@ -5,7 +5,7 @@ import interfaces.Swipe;
 
 public class Parrot extends Bird implements Swipe{
 
-
+    private int count = 0;
     private boolean canSpeak;
 
     public Parrot(String name, int age, int weight, int flightHeight, int airSpeed, boolean fly, boolean canSpeak) {
@@ -14,6 +14,8 @@ public class Parrot extends Bird implements Swipe{
         this.canSpeak = canSpeak;
     }
 
+
+    //a succession of drawings
     @Override
     public void onSwipe() {
         String[] strings = new String[9];
@@ -27,8 +29,10 @@ public class Parrot extends Bird implements Swipe{
         strings[7] = "/images/rabbit.png";
         strings[8] = "/images/snake.png";
 
-        int a = (int) (Math.random() * 9);
-        setImage(strings[a]);
+        if (count > 8)
+            count = 0;
+        setImage(strings[count]);
+        count++;
     }
 
     public boolean isCanSpeak() {

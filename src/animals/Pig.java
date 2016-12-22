@@ -21,7 +21,7 @@ public class Pig extends Animal implements Swipe, Voice {
         setImage("/images/pig.png");
     }
 
-
+//random change pictures
     @Override
     public void onSwipe() {
         String[] strings = new String[9];
