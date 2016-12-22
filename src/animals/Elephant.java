@@ -2,12 +2,11 @@ package animals;
 
 
 import classes.Animal;
-import interfaces.Voice;
 
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-public class Elephant extends Animal implements Voice {
+public class Elephant extends Animal {
 
     public Elephant(String name, int age, int weight)
     {

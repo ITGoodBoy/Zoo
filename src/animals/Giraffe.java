@@ -10,14 +10,7 @@ import java.awt.image.BufferedImage;
 
 public class Giraffe extends Animal implements Rotatable {
 
-    public int getNeckLength() {
-        return neckLength;
-    }
-
-    public void setNeckLength(int neckLength) {
-        this.neckLength = neckLength;
-    }
-
+//inheritance, and the addition of its features
     private int neckLength;
     public Giraffe(String name, int age, int weight, int neckLength) {
         super(name, age, weight);
@@ -35,6 +28,19 @@ public class Giraffe extends Animal implements Rotatable {
                 imageIcon.getIconWidth(), imageIcon.getIconHeight(), null);
         graphics2D.dispose();
         setImage(new ImageIcon(bufferedImage));
+    }
+
+    @Override
+    public void onVoice() {
+        System.out.println("I communicate at low frequency");
+    }
+
+    public int getNeckLength() {
+        return neckLength;
+    }
+
+    public void setNeckLength(int neckLength) {
+        this.neckLength = neckLength;
     }
 
     @Override

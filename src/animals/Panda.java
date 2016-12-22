@@ -2,12 +2,12 @@ package animals;
 
 
 import classes.Animal;
-import interfaces.Voice;
 
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-public class Panda extends Animal implements Voice {
+public class Panda extends Animal {
+    //inheritance, and the addition of its features
 
     private boolean kungfuMaster;
 

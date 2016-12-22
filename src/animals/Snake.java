@@ -1,13 +1,12 @@
 package animals;
 
 import classes.Animal;
-import interfaces.Voice;
 
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 
-public class Snake extends Animal implements Voice {
+public class Snake extends Animal {
     public Snake(String name, int age, int weight) {
         super(name, age, weight);
         setImage("/images/snake.png");

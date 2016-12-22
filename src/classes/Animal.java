@@ -4,8 +4,8 @@ package classes;
 import javax.swing.*;
 import java.awt.*;
 
-public class Animal {
-
+public abstract class Animal {
+ //encapsulation
     private String name;
     private int age;
     private int weight;
@@ -57,6 +57,8 @@ public class Animal {
     public void setImage(ImageIcon image) {
         this.image = image;
     }
+
+    public abstract void onVoice();
 
     @Override
     public String toString() {

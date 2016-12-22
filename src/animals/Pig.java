@@ -3,12 +3,11 @@ package animals;
 
 import classes.Animal;
 import interfaces.Swipe;
-import interfaces.Voice;
 
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-public class Pig extends Animal implements Swipe, Voice {
+public class Pig extends Animal implements Swipe {
 
     public Pig()
     {
@@ -36,10 +35,6 @@ public class Pig extends Animal implements Swipe, Voice {
         strings[8] = "/images/snake.png";
 
         int a = (int) (Math.random() * 9);
-        if (a == 6)
-        {
-            onVoice();
-        }
         setImage(strings[a]);
     }
 

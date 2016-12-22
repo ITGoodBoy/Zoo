@@ -1,4 +1,6 @@
 package classes;
+
+//Inheriting from the Animal and add its own features for Bird class
 public class Bird extends Animal {
 
     private int flightHeight;
@@ -9,6 +11,8 @@ public class Bird extends Animal {
     {
         super();
     }
+
+
     public Bird(String name, int age, int weight, int flightHeight, int airSpeed, boolean fly)
     {
         super(name, age, weight);
@@ -39,6 +43,11 @@ public class Bird extends Animal {
 
     public void setFly(boolean fly) {
         this.fly = fly;
+    }
+
+    @Override
+    public void onVoice() {
+        System.out.println("voice birds");
     }
 
     @Override

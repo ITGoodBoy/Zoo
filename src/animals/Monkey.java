@@ -1,20 +1,13 @@
 package animals;
 
 import classes.Animal;
-import interfaces.Voice;
+
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 
-public class Monkey extends Animal implements Voice {
-    public int getNumberOfBananas() {
-        return numberOfBananas;
-    }
-
-    public void setNumberOfBananas(int numberOfBananas) {
-        this.numberOfBananas = numberOfBananas;
-    }
-
+public class Monkey extends Animal {
+    //inheritance, and the addition of its features
     private int numberOfBananas;
 
     public Monkey(String name, int age, int weight, int numberOfBananas) {
@@ -38,6 +31,14 @@ public class Monkey extends Animal implements Voice {
         {
             exc.printStackTrace(System.out);
         }
+    }
+
+    public int getNumberOfBananas() {
+        return numberOfBananas;
+    }
+
+    public void setNumberOfBananas(int numberOfBananas) {
+        this.numberOfBananas = numberOfBananas;
     }
 
     @Override

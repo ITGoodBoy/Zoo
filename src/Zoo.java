@@ -47,14 +47,10 @@ public class Zoo extends JFrame {
                 for (int j = 0; j < 3; j++) {
                     if (object == jButtons[i][j])
                     {
-                        if (animals[count] instanceof Elephant)
-                        {
-                            ((Elephant) animals[count]).onVoice();
-                        }
-                        if (animals[count] instanceof Monkey)
-                        {
-                            ((Monkey) animals[count]).onVoice();
-                        }
+                        //polymorphism - all animals can make a sound, but each does their sound is different from other
+                        animals[count].onVoice();
+
+
                         if (animals[count] instanceof Giraffe)
                         {
                             ((Giraffe) animals[count]).onRotate(24);
@@ -65,17 +61,9 @@ public class Zoo extends JFrame {
                             ((Pig) animals[count]).onSwipe();
                             jButtons[i][j].setIcon(animals[count].getImage());
                         }
-                        if (animals[count] instanceof Panda)
-                        {
-                            ((Panda) animals[count]).onVoice();
-                        }
                         if (animals[count] instanceof Pig)
                         {
                             ((Pig) animals[count]).onSwipe();
-                        }
-                        if (animals[count] instanceof Snake)
-                        {
-                            ((Snake) animals[count]).onVoice();
                         }
                         if (animals[count] instanceof Penguin)
                         {

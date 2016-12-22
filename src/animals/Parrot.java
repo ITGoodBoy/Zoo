@@ -3,7 +3,11 @@ package animals;
 import classes.Bird;
 import interfaces.Swipe;
 
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 public class Parrot extends Bird implements Swipe{
+    //inheritance, and the addition of its features
 
     private int count = 0;
     private boolean canSpeak;
@@ -46,5 +50,19 @@ public class Parrot extends Bird implements Swipe{
     @Override
     public String toString() {
         return super.toString() + " is Can Speak? - " + isCanSpeak();
+    }
+
+    @Override
+    public void onVoice() {
+        try
+        {
+            Clip clip = AudioSystem.getClip();
+            clip.open(AudioSystem.getAudioInputStream(getClass().getResource("/sounds/penguin.wav")));
+            clip.start();
+        }
+        catch (Exception exc)
+        {
+            exc.printStackTrace(System.out);
+        }
     }
 }

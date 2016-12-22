@@ -2,6 +2,9 @@ package animals;
 
 import classes.Animal;
 import interfaces.Increase;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 
@@ -27,4 +30,17 @@ public class Rabbit extends Animal implements Increase {
         }
     }
 
+    @Override
+    public void onVoice() {
+        try
+        {
+            Clip clip = AudioSystem.getClip();
+            clip.open(AudioSystem.getAudioInputStream(getClass().getResource("/sounds/rabbit.wav")));
+            clip.start();
+        }
+        catch (Exception exc)
+        {
+            exc.printStackTrace(System.out);
+        }
+    }
 }
