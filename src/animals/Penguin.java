@@ -12,7 +12,7 @@ public class Penguin extends Bird implements Increase {
         super(name, age, weight, flightHeight, airSpeed, fly);
         setImage("/images/penguin.png");
     }
-
+    //resizing images
     @Override
     public void onIncrease(int increase) {
         Image img = new ImageIcon(getClass().getResource("/images/penguin.png")).getImage().

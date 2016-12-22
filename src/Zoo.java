@@ -84,7 +84,7 @@ public class Zoo extends JFrame {
                         }
                         if (animals[count] instanceof Rabbit)
                         {
-                            ((Rabbit) animals[count]).onIncrease(5);
+                            ((Rabbit) animals[count]).onIncrease(-5);
                             jButtons[i][j].setIcon(animals[count].getImage());
                         }
                         if (animals[count] instanceof Parrot)

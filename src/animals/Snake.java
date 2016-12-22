@@ -12,7 +12,7 @@ public class Snake extends Animal implements Voice {
         super(name, age, weight);
         setImage("/images/snake.png");
     }
-
+//snake sound
     @Override
     public void onVoice() {
         try

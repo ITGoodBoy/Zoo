@@ -24,7 +24,7 @@ public class Giraffe extends Animal implements Rotatable {
         setImage("/images/giraffe.png");
         this.neckLength = neckLength;
     }
-
+//change the rotation angle of the image
     @Override
     public void onRotate(int angle) {
         ImageIcon imageIcon = new ImageIcon(getImage().getImage());

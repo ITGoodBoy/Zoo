@@ -16,7 +16,7 @@ public class Panda extends Animal implements Voice {
         setImage("/images/panda.png");
         this.kungfuMaster = kungfuMaster;
     }
-
+//panda sound
     @Override
     public void onVoice() {
         try

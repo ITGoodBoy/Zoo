@@ -14,7 +14,7 @@ public class Elephant extends Animal implements Voice {
         super(name, age, weight);
         setImage("/images/elephant.png");
     }
-
+//elephant sound
     @Override
     public void onVoice() {
         try
